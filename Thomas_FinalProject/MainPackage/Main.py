@@ -18,6 +18,11 @@ from cryptography.fernet import Fernet
 import json
 
 if __name__ == "__main__":
+    
+# Print the location  
+    decrypt_location_data(index_list)
+# Print the movie
+    decrypter()
  
 #RELATIVE Path - can exchange code and it will still work on different machines
     im = Image.open(r"..\ImageArchivePackage\ImageArchive\Avengers.jpg")   #File has to be relative to the entry point
@@ -31,31 +36,4 @@ if __name__ == "__main__":
 # Python is intuitive enough to open the Windows Photo Viewer
 # We created a temporary image file by running thousands of lines of code using the .show
     
-# Print the location  
-    index_list = [
-        "42061",
-        "44404",
-        "28799",
-        "298",
-        "8848",
-        "27781",
-        "105654",
-        "21723",
-        "47096",
-        "8021",
-        "28420",
-        "19312",
-        "22147",
-        "42049",
-        "23887",
-        "599",
-        "105655",
-        "24232",
-        "19312",
-        "9443"
-    ]
-    decrypted_text = decrypt_location_data(index_list)
-    decrypt_location_data(index_list)
 
-# Print the movie
-    decrypter()
