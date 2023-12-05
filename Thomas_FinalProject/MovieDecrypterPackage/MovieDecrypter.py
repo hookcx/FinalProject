@@ -1,5 +1,6 @@
+#MovieDecrypter.py
 # Name: Dylan Moore
-# email: moore4dl@mail.uc.edu
+# Email: moore4dl@mail.uc.edu
 # Assignment Title: Final
 # Course: IS 4010
 # Semester/Year: Fall 2023

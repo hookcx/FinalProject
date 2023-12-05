@@ -1,6 +1,14 @@
+#DecryptLocation.py
+# Name: Max Smith
+# Email: smith6mx@mail.uc.edu
+# Assignment Title: Final
+# Course: IS 4010
+# Semester/Year: Fall 2023
+# Brief Description: The culmination of this semester and its teachings 
+
 def decrypt_location_data(index_list):
     decrypted_data = []
-    with open('English.txt', 'r') as file:
+    with open('english.txt', 'r') as file:
         lines = file.readlines()
         for index in index_list:
             line_index = int(index)
@@ -11,7 +19,7 @@ def decrypt_location_data(index_list):
     return ' '.join(decrypted_data)
 
 
-encrypted_data = [
+index_list = [
         "42061",
         "44404",
         "28799",
@@ -33,13 +41,13 @@ encrypted_data = [
         "19312",
         "9443"
     ]
-decrypted_text = decrypt_location_data(encrypted_data)
+decrypted_text = decrypt_location_data(index_list)
 
 #testing on Hello World
 e =  ["20842", "46853"]
 d = decrypt_location_data(e)
+# print(d)
 
-print(d)
 print(decrypted_text)
 
 

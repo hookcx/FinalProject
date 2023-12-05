@@ -1,3 +1,11 @@
+#Functions.py
+# Name: Cassidy Hook
+# Email: hookcx@mail.uc.edu
+# Assignment Title: Final
+# Course: IS 4010
+# Semester/Year: Fall 2023
+# Brief Description: The culmination of this semester and its teachings 
+
 from PIL import Image, ImageFilter, ImageDraw, ImageFont   #Image manipulation
 import os, sys
 import requests

@@ -1,11 +1,21 @@
 # main.py
+# Name: Kelly Roden, Cassidy Hook, Max Smith, Dylan Moore
+# Email: rodenky@mail.uc.edu, hookcx@mail.uc.edu, smith6mx@mail.uc.edu, moore4dl@mail.uc.edu
+# Assignment Title: Final
+# Course: IS 4010
+# Semester/Year: Fall 2023
+# Brief Description: The culmination of this semester and its teachings
+# Thomas Final Project
 
 from PIL import Image, ImageFilter, ImageDraw, ImageFont 
 import os, sys
 import requests
 from io import BytesIO
 from FunctionsPackage.Functions import *
-
+from DecryptLocationPackage.DecryptLocation import *
+from MovieDecrypterPackage.MovieDecrypter import *
+from cryptography.fernet import Fernet
+import json
 
 if __name__ == "__main__":
  
@@ -20,6 +30,32 @@ if __name__ == "__main__":
     my_image.show(my_image)
 # Python is intuitive enough to open the Windows Photo Viewer
 # We created a temporary image file by running thousands of lines of code using the .show
+    
+# Print the location  
+    index_list = [
+        "42061",
+        "44404",
+        "28799",
+        "298",
+        "8848",
+        "27781",
+        "105654",
+        "21723",
+        "47096",
+        "8021",
+        "28420",
+        "19312",
+        "22147",
+        "42049",
+        "23887",
+        "599",
+        "105655",
+        "24232",
+        "19312",
+        "9443"
+    ]
+    decrypted_text = decrypt_location_data(index_list)
+    decrypt_location_data(index_list)
 
-
-
+# Print the movie
+    decrypter()
