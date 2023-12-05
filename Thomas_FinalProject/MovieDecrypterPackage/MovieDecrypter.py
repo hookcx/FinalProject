@@ -10,23 +10,28 @@ from cryptography.fernet import Fernet
 import json
 
 #here we go
-def Decrypter(): 
+def decrypter():
     '''
-    This should decrypt things encyrpted using AES
-    @param: json must be in project folder
-    @returns: decrypted text
+    Decrypts a CSV file that is encrypted in AES
+    @param: Specified key to decrypt selected
+    @return: The decrypted string
     '''
-    file_path = 'file.json'
-
+    file_path = 'File.json'
     with open(file_path, 'r') as file:
         data = json.load(file)
-    print(data)
-    key= "4g8xAE7lajIzp6UTyITiAGOYMSGzs5qKeMIdoT_js6U=" #Decryption key goes here
-    name = "Thomas"
-    token = data.get(name)
-    
-    fernet = Fernet(key.decrypt())
-    decrypted_data = fernet.decrypt(token.encode())
-    x = (decrypted_data.decode())
-    return (x)
-    print(x)
+    thomas_values = data.get("Thomas", [])
+    key_str = "4g8xAE7lajIzp6UTyITiAGOYMSGzs5qKeMIdoT_js6U=" 
+    key = key_str.encode()  # Decryption key in bytes
+    if thomas_values:
+        fernet = Fernet(key)
+        decrypted_data_list = []
+        for token in thomas_values:
+            decrypted_data = fernet.decrypt(token.encode())
+            x = decrypted_data.decode()
+            decrypted_data_list.append(x)
+        return print(decrypted_data_list)
+    return print("Decrypter ERROR")  
+
+#code to test and run decrypter
+if __name__ == "__main__":
+    decrypter()
